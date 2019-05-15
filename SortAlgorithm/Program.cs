@@ -14,6 +14,7 @@ namespace SortAlgorithm
 
             List<SortAlgorithm> algorithmList = new List<SortAlgorithm>();
             algorithmList.Add(new SelectionSort());
+            algorithmList.Add(new InsertionSort());
 
             foreach (SortAlgorithm algorithm in algorithmList)
             {

@@ -6,5 +6,24 @@ namespace SortAlgorithm
 {
     public class InsertionSort : SortAlgorithm
     {
+        protected override string AlgorithmName()
+        {
+            return "插入排序法";
+        }
+
+        protected override void Sort()
+        {
+            for (int i = 1; i < array.Length; i++)
+            {
+                int temp = array[i];
+                int j = i - 1;
+                while (j > -1 && temp < array[j])
+                {
+                    array[j + 1] = array[j];
+                    j--;
+                }
+                array[j + 1] = temp;
+            }
+        }
     }
 }
