@@ -6,6 +6,7 @@ namespace SortAlgorithm
 {
     public abstract class SortAlgorithm
     {
+        protected int[] originalArray = new int[0];
         protected int[] array = new int[0];
 
         protected virtual string AlgorithmName()
@@ -13,7 +14,12 @@ namespace SortAlgorithm
             return string.Empty;
         }
 
-        protected virtual void Sort()
+        protected virtual void Sort_SmallToBig()
+        {
+            return;
+        }
+
+        protected virtual void Sort_BigToSmall()
         {
             return;
         }
@@ -25,18 +31,27 @@ namespace SortAlgorithm
             array[j] = temp;
         }
 
-        public void Print(int[] data)
+        protected void PrintArray()
         {
-            array = data;
-
-            Sort();
-
-            Console.WriteLine(AlgorithmName());
-
             foreach (int current in array)
             {
                 Console.Write($"{current}\t");
             }
+        }
+
+        public void Print(int[] data)
+        {
+            originalArray = data;
+
+            Console.WriteLine(AlgorithmName());
+
+            Console.WriteLine("小到大");
+            Sort_SmallToBig();
+
+            Console.WriteLine();
+
+            Console.WriteLine("大到小");
+            Sort_BigToSmall();
 
             Console.WriteLine("\n");
         }
