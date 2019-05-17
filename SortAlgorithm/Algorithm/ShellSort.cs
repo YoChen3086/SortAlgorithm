@@ -17,8 +17,6 @@ namespace SortAlgorithm
 
         protected override void Sort_SmallToBig()
         {
-            array = originalArray;
-
             int i, j, tmp;
             int gap = array.Length / 2;
             for (; gap > 0; gap = gap / 2)
@@ -34,14 +32,10 @@ namespace SortAlgorithm
                     array[j] = tmp;
                 }
             }
-
-            PrintArray();
         }
 
         protected override void Sort_BigToSmall()
         {
-            array = originalArray;
-
             int i, j, tmp;
             int gap = array.Length / 2;
             for (; gap > 0; gap = gap / 2)
@@ -57,8 +51,6 @@ namespace SortAlgorithm
                     array[j] = tmp;
                 }
             }
-
-            PrintArray();
         }
     }
 }

@@ -17,8 +17,6 @@ namespace SortAlgorithm
 
         protected override void Sort_SmallToBig()
         {
-            array = originalArray;
-
             for (int i = 0; i < array.Length; i++)
             {
                 int min = i;
@@ -34,14 +32,10 @@ namespace SortAlgorithm
                     Swap(i, min);
                 }
             }
-
-            PrintArray();
         }
 
         protected override void Sort_BigToSmall()
         {
-            array = originalArray;
-
             for (int i = 0; i < array.Length; i++)
             {
                 int max = i;
@@ -57,8 +51,6 @@ namespace SortAlgorithm
                     Swap(i, max);
                 }
             }
-
-            PrintArray();
         }
     }
 }

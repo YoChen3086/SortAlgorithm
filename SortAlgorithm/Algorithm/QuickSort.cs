@@ -17,22 +17,14 @@ namespace SortAlgorithm
 
         protected override void Sort_SmallToBig()
         {
-            array = originalArray;
-
             // 以data[left]為Pivot，left相當於最左邊第一個元素
             SubSort_SmallToBig(0, array.Length - 1);
-
-            PrintArray();
         }
 
         protected override void Sort_BigToSmall()
         {
-            array = originalArray;
-
             // 以data[left]為Pivot，left相當於最左邊第一個元素
             SubSort_BigToSmall(0, array.Length - 1);
-
-            PrintArray();
         }
 
         private void SubSort_SmallToBig(int left, int right)

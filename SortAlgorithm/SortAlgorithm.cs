@@ -47,19 +47,21 @@ namespace SortAlgorithm
             }
         }
 
-        public void Print()
+        public void Sort()
         {
             Console.WriteLine(AlgorithmName());
             
             Console.WriteLine("小到大");
             originalArray.CopyTo(array, 0);
             Sort_SmallToBig();
+            PrintArray();
 
             Console.WriteLine();
 
             Console.WriteLine("大到小");
             originalArray.CopyTo(array, 0);
             Sort_BigToSmall();
+            PrintArray();
 
             Console.WriteLine("\n");
         }

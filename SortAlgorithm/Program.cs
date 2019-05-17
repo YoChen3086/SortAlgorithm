@@ -23,7 +23,7 @@ namespace SortAlgorithm
 
             foreach (SortAlgorithm algorithm in algorithmList)
             {
-                algorithm.Print();
+                algorithm.Sort();
             }
 
             Console.ReadLine();

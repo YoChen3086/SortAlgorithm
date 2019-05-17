@@ -17,8 +17,6 @@ namespace SortAlgorithm
 
         protected override void Sort_SmallToBig()
         {
-            array = originalArray;
-
             int left = 0;
             int right = array.Length - 1;
             int shift = 0;
@@ -44,14 +42,10 @@ namespace SortAlgorithm
                 }
                 left = shift;
             }
-
-            PrintArray();
         }
 
         protected override void Sort_BigToSmall()
         {
-            array = originalArray;
-
             int left = 0;
             int right = array.Length - 1;
             int shift = 0;
@@ -77,8 +71,6 @@ namespace SortAlgorithm
                 }
                 left = shift;
             }
-
-            PrintArray();
         }
     }
 }

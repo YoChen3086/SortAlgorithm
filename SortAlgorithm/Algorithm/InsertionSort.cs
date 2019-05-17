@@ -17,8 +17,6 @@ namespace SortAlgorithm
 
         protected override void Sort_SmallToBig()
         {
-            array = originalArray;
-
             for (int i = 1; i < array.Length; i++)
             {
                 int temp = array[i];
@@ -30,15 +28,10 @@ namespace SortAlgorithm
                 }
                 array[j + 1] = temp;
             }
-
-            PrintArray();
         }
 
         protected override void Sort_BigToSmall()
         {
-            array = originalArray;
-
-
             for (int i = 1; i < array.Length; i++)
             {
                 int temp = array[i];
@@ -50,8 +43,6 @@ namespace SortAlgorithm
                 }
                 array[j + 1] = temp;
             }
-
-            PrintArray();
         }
     }
 }
