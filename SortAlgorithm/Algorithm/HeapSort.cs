@@ -4,7 +4,10 @@ using System.Text;
 
 namespace SortAlgorithm
 {
-    public class InsertionSort : SortAlgorithm
+    public class HeapSort : SortAlgorithm
     {
+        public HeapSort(int[] data) : base(data)
+        {
+        }
     }
 }
