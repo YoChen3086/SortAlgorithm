@@ -15,24 +15,20 @@ namespace SortAlgorithm
         {
             array = originalArray;
 
+            int i, j, tmp;
             int gap = array.Length / 2;
-
-            while (gap > 0)
+            for (; gap > 0; gap = gap / 2)
             {
-                for (int k = 0; k < gap; k++)
+                for (i = gap; i < array.Length; i++)
                 {
-                    for (var i = k + gap; i < array.Length; i += gap)
+                    //插入排序法 
+                    tmp = array[i];
+                    for (j = i; j >= gap && tmp < array[j - gap]; j -= gap)
                     {
-                        for (var j = i - gap; j >= k; j -= gap)
-                        {
-                            if (array[j] > array[j + gap])
-                                Swap(j, j + gap);
-                            else
-                                break;
-                        }
+                        array[j] = array[j - gap];
                     }
+                    array[j] = tmp;
                 }
-                gap = gap / 2;
             }
 
             PrintArray();
@@ -42,24 +38,20 @@ namespace SortAlgorithm
         {
             array = originalArray;
 
+            int i, j, tmp;
             int gap = array.Length / 2;
-
-            while (gap > 0)
+            for (; gap > 0; gap = gap / 2)
             {
-                for (int k = 0; k < gap; k++)
+                for (i = gap; i < array.Length; i++)
                 {
-                    for (var i = k + gap; i < array.Length; i += gap)
+                    //插入排序法 
+                    tmp = array[i];
+                    for (j = i; j >= gap && tmp > array[j - gap]; j -= gap)
                     {
-                        for (var j = i - gap; j >= k; j -= gap)
-                        {
-                            if (array[j] < array[j + gap])
-                                Swap(j, j + gap);
-                            else
-                                break;
-                        }
+                        array[j] = array[j - gap];
                     }
+                    array[j] = tmp;
                 }
-                gap = gap / 2;
             }
 
             PrintArray();
