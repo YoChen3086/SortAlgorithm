@@ -6,6 +6,10 @@ namespace SortAlgorithm
 {
     public class QuickSort : SortAlgorithm
     {
+        public QuickSort(int[] data) : base(data)
+        {
+        }
+
         protected override string AlgorithmName()
         {
             return "快速排序法";

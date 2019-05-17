@@ -6,6 +6,10 @@ namespace SortAlgorithm
 {
     public class ShellSort : SortAlgorithm
     {
+        public ShellSort(int[] data) : base(data)
+        {
+        }
+
         protected override string AlgorithmName()
         {
             return "希爾排序法";

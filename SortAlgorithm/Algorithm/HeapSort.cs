@@ -6,5 +6,8 @@ namespace SortAlgorithm
 {
     public class HeapSort : SortAlgorithm
     {
+        public HeapSort(int[] data) : base(data)
+        {
+        }
     }
 }

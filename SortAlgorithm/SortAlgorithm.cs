@@ -6,8 +6,16 @@ namespace SortAlgorithm
 {
     public abstract class SortAlgorithm
     {
-        protected int[] originalArray = new int[0];
-        protected int[] array = new int[0];
+        protected int[] originalArray;
+        protected int[] array;
+
+        public SortAlgorithm(int[] data)
+        {
+            originalArray = new int[data.Length];
+            array = new int[data.Length];
+
+            data.CopyTo(originalArray, 0);
+        }
 
         protected virtual string AlgorithmName()
         {
@@ -39,18 +47,18 @@ namespace SortAlgorithm
             }
         }
 
-        public void Print(int[] data)
+        public void Print()
         {
-            originalArray = data;
-
             Console.WriteLine(AlgorithmName());
-
+            
             Console.WriteLine("小到大");
+            originalArray.CopyTo(array, 0);
             Sort_SmallToBig();
 
             Console.WriteLine();
 
             Console.WriteLine("大到小");
+            originalArray.CopyTo(array, 0);
             Sort_BigToSmall();
 
             Console.WriteLine("\n");

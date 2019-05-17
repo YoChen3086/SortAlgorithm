@@ -6,6 +6,10 @@ namespace SortAlgorithm
 {
     public class InsertionSort : SortAlgorithm
     {
+        public InsertionSort(int[] data) : base(data)
+        {
+        }
+
         protected override string AlgorithmName()
         {
             return "插入排序法";

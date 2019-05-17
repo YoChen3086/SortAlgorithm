@@ -6,6 +6,10 @@ namespace SortAlgorithm
 {
     public class ShakerSort : SortAlgorithm
     {
+        public ShakerSort(int[] data) : base(data)
+        {
+        }
+
         protected override string AlgorithmName()
         {
             return "搖晃排序法";

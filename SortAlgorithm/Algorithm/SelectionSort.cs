@@ -6,6 +6,10 @@ namespace SortAlgorithm
 {
     public class SelectionSort : SortAlgorithm
     {
+        public SelectionSort(int[] data) : base(data)
+        {
+        }
+
         protected override string AlgorithmName()
         {
             return "選擇排序法";

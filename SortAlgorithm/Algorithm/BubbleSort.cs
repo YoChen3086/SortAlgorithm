@@ -6,6 +6,10 @@ namespace SortAlgorithm
 {
     public class BubbleSort : SortAlgorithm
     {
+        public BubbleSort(int[] data) : base(data)
+        {
+        }
+
         protected override string AlgorithmName()
         {
             return "氣泡排序法";

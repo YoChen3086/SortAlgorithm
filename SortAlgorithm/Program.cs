@@ -13,16 +13,17 @@ namespace SortAlgorithm
             MakeQuestion();
 
             List<SortAlgorithm> algorithmList = new List<SortAlgorithm>();
-            algorithmList.Add(new SelectionSort());
-            algorithmList.Add(new InsertionSort());
-            algorithmList.Add(new BubbleSort());
-            algorithmList.Add(new ShellSort());
-            algorithmList.Add(new ShakerSort());
-            algorithmList.Add(new QuickSort());
+            algorithmList.Add(new SelectionSort(question));
+            algorithmList.Add(new InsertionSort(question));
+            algorithmList.Add(new BubbleSort(question));
+            algorithmList.Add(new ShellSort(question));
+            algorithmList.Add(new ShakerSort(question));
+            algorithmList.Add(new QuickSort(question));
+            algorithmList.Add(new MergeSort(question));
 
             foreach (SortAlgorithm algorithm in algorithmList)
             {
-                algorithm.Print(question);
+                algorithm.Print();
             }
 
             Console.ReadLine();
